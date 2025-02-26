@@ -32,7 +32,7 @@ const buildOptions: BuildOptions = {
     entryNames: "[name]-[hash]",
     chunkNames: "[name]-[hash]",
     outdir,
-    publicPath: serveDev ? "/" : "/gh-personal-page",
+    publicPath: env.PUBLIC_PATH || "/",
     bundle: true,
     minify: !serveDev,
     sourcemap: true,
